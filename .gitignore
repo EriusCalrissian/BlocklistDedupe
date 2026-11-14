@@ -1,0 +1,17 @@
+# Build artifacts (dist/blocklist-main.txt is committed by the workflow)
+dist/*.tmp
+
+# Node (local hostlist-compiler runs)
+node_modules/
+npm-debug.log*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

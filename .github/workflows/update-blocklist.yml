@@ -1,0 +1,62 @@
+name: Update blocklist
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - configuration.json
+      - exclusions.txt
+      - scripts/update_stats.py
+      - .github/workflows/update-blocklist.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-blocklist
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install HostlistCompiler
+        run: npm install -g @adguard/hostlist-compiler
+
+      - name: Compile blocklist
+        run: |
+          mkdir -p dist
+          hostlist-compiler -c configuration.json -o dist/blocklist-main.tmp
+          rules=$(grep -cv '^!' dist/blocklist-main.tmp || true)
+          echo "Rules: $rules"
+          if [ "$rules" -lt 1000 ]; then
+            echo "::error::Only $rules rules compiled, refusing to publish"
+            exit 1
+          fi
+          if [ -f dist/blocklist-main.txt ] && \
+             cmp -s <(grep -v '^!' dist/blocklist-main.txt) <(grep -v '^!' dist/blocklist-main.tmp); then
+            echo "Rules unchanged"
+            rm dist/blocklist-main.tmp
+          else
+            mv dist/blocklist-main.tmp dist/blocklist-main.txt
+          fi
+
+      - name: Update README stats
+        run: python3 scripts/update_stats.py
+
+      - name: Set commit date
+        run: echo "BUILD_DATE=$(date -u +%Y-%m-%d)" >> "$GITHUB_ENV"
+
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Update blocklist ${{ env.BUILD_DATE }}
+          file_pattern: dist/blocklist-main.txt README.md

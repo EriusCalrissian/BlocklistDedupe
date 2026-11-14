@@ -1,0 +1,24 @@
+{
+  "name": "blocklist-main",
+  "description": "Merged and deduplicated blocklist for AdGuard Home",
+  "sources": [
+    { "source": "https://big.oisd.nl", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/refs/heads/main/filters/security/filter_31_StalkerwareIndicatorsList/filter.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/EriusCalrissian/complete-doh-vpn-proxy-bypass-blocklist/main/adblock/doh.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.huawei.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.oppo-realme.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.tiktok.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.winoffice.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.xiaomi.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt", "type": "adblock" },
+    { "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/tif.medium.txt", "type": "adblock" }
+  ],
+  "transformations": ["RemoveComments", "Deduplicate", "Compress"],
+  "exclusions_sources": ["exclusions.txt"]
+}

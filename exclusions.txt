@@ -1,0 +1,7 @@
+! Rules that must never end up in the merged list.
+! One entry per line; lines starting with "!" or "#" are comments.
+!
+! Each entry is matched as a substring against the rule:
+!   ||example.com^      removes exactly the rule for example.com (subdomain rules stay)
+!   *.example.com^      removes all subdomain rules of example.com
+!   /regex/             regular expression
