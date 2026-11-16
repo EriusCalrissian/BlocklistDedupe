@@ -20,9 +20,9 @@ Updated automatically on every build.
 <!-- stats:start -->
 | | Rules |
 | --- | ---: |
-| Sum of all sources | 838,690 |
-| Merged list | **563,324** |
-| Removed (duplicates, redundant subdomains, exclusions) | 275,366 (**32.8%**) |
+| Sum of all sources | 845,114 |
+| Merged list | **568,660** |
+| Removed (duplicates, redundant subdomains, exclusions) | 276,454 (**32.7%**) |
 <!-- stats:end -->
 
 ## Included sources
@@ -32,9 +32,9 @@ Generated automatically from [`configuration.json`](configuration.json) on every
 <!-- sources:start -->
 | Source | Format | Rules |
 | --- | --- | ---: |
-| [oisd big](https://big.oisd.nl) | adblock | 227,844 |
+| [oisd big](https://big.oisd.nl) | adblock | 228,322 |
 | [Stalkerware Indicators List](https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/refs/heads/main/filters/security/filter_31_StalkerwareIndicatorsList/filter.txt) | adblock | 929 |
-| [Complete Encrypted DNS Bypass Blocklist - incl. dnsbunker.org](https://raw.githubusercontent.com/EriusCalrissian/complete-doh-vpn-proxy-bypass-blocklist/main/adblock/doh.txt) | adblock | 3,575 |
+| [Complete Encrypted DNS Bypass Blocklist - incl. dnsbunker.org](https://raw.githubusercontent.com/EriusCalrissian/complete-doh-vpn-proxy-bypass-blocklist/main/adblock/doh.txt) | adblock | 3,568 |
 | [AntiMalwareAdGuardHome.txt](https://raw.githubusercontent.com/DandelionSprout/adfilt/refs/heads/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt) | adblock | 12,565 |
 | [HaGeZi's DynDNS - guards against dynamic DNS abuse!](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt) | adblock | 1,519 |
 | [HaGeZi's Badware Hoster - guards against malicious hosting services!](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt) | adblock | 1,098 |
@@ -46,8 +46,8 @@ Generated automatically from [`configuration.json`](configuration.json) on every
 | [HaGeZi's TikTok Tracker - blocks built-in trackers from devices, apps, and OSes!](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.tiktok.txt) | adblock | 548 |
 | [HaGeZi's Microsoft Tracker - blocks built-in trackers from devices, apps, and OSes!](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.winoffice.txt) | adblock | 399 |
 | [HaGeZi's Xiaomi Tracker - blocks built-in trackers from devices, apps, and OSes!](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.xiaomi.txt) | adblock | 411 |
-| [HaGeZi's Multi PRO - extended protection (recommended)](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt) | adblock | 235,119 |
-| [HaGeZi's Threat Intelligence Feeds - medium version (best for browser/mobile ad blockers)](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/tif.medium.txt) | adblock | 353,313 |
+| [HaGeZi's Multi PRO - extended protection (recommended)](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt) | adblock | 241,181 |
+| [HaGeZi's Threat Intelligence Feeds - medium version (best for browser/mobile ad blockers)](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/tif.medium.txt) | adblock | 353,204 |
 <!-- sources:end -->
 
 ## Managing sources
